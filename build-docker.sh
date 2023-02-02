@@ -1,2 +1,3 @@
 #!/bin/sh
-docker build . -t dotprint:latest
+docker build --file ubuntu.Dockerfile \
+             --tag local-dotprint .
