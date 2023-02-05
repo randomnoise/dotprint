@@ -11,7 +11,8 @@ RUN cmake . && make
 FROM alpine:3.17
 LABEL MAINTAINER="github/@rusq"
 
-RUN apk --no-cache add libstdc++ cairomm glibmm msttcorefonts-installer
+RUN apk --no-cache add libstdc++ cairomm glibmm \
+msttcorefonts-installer ttf-droid ttf-liberation
 
 RUN update-ms-fonts && fc-cache -f
 
