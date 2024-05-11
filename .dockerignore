@@ -1,0 +1,17 @@
+CMakeCache.txt
+CMakeFiles/
+Makefile
+cmake_install.cmake
+.cproject
+.project
+dotprint.code-workspace
+build/
+README.md
+.gitignore
+.git/
+Dockerfile
+alpine.Dockerfile
+.dockerignore
+build-docker.sh
+convert.sh
+convert-accounting-files.sh
