@@ -1,4 +1,4 @@
-FROM alpine:3.17 as stage
+FROM alpine:3.19 as stage
 
 RUN apk --no-cache add glibmm-dev cairomm-dev gcc g++ cmake make
 
@@ -8,7 +8,7 @@ WORKDIR /build
 
 RUN cmake . && make
 
-FROM alpine:3.17
+FROM alpine:3.19
 LABEL MAINTAINER="github/@rusq"
 
 RUN apk --no-cache add libstdc++ cairomm glibmm \
