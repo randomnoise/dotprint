@@ -1,4 +1,7 @@
-FROM ubuntu:24.04 as build-reqs
+# syntax=docker/dockerfile:1
+ARG UBUNTU_VERSION=24.04
+
+FROM ubuntu:$UBUNTU_VERSION as build-reqs
 
     RUN apt-get update \
      && apt-get install --no-install-recommends --yes \
@@ -15,7 +18,7 @@ FROM ubuntu:24.04 as build-reqs
      && rm --recursive --force \
         /var/lib/apt/lists/*
 
-FROM ubuntu:24.04 as execution-minimal-reqs
+FROM ubuntu:$UBUNTU_VERSION as execution-minimal-reqs
 
     ENV DEBIAN_FRONTEND=noninteractive
     RUN apt-get update \
